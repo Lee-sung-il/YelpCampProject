@@ -22,4 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-src/YelpCampProject/.env
+src/YelpCampProject/seeds/.env
+.env
+src/YelpCampProject/seeds/campingImages.json
