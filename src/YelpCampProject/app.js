@@ -69,7 +69,7 @@ const sessionConfig = {
   cookie: {
     httpOnly: true,
     // secure: true,
-    secure: false,
+    secure: process.env.NODE_ENV === 'production', // 🔥 환경에 따라 자동 적용
     expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
     maxAge: 1000 * 60 * 60 * 24 * 7,
   },
@@ -138,7 +138,6 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 app.use((req, res, next) => {
-  console.log(req.query);
   res.locals.currentUser = req.user;
   res.locals.success = req.flash('success');
   res.locals.error = req.flash('error');
