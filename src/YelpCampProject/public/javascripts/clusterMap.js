@@ -2,7 +2,12 @@
 const campgrounds = campgroundsDataJson;
 
 // Leaflet 지도를 'map'이라는 id를 가진 div에 생성하고, 좌표를 기준으로 중심 설정 (위도, 경도)
-const map = L.map('map');
+const map = L.map('map', {
+    zoomControl: false // 기본 줌 컨트롤 제거
+});
+L.control.zoom({
+    position: 'topright' // 원하는 위치 지정
+}).addTo(map);
 
 // OpenStreetMap 타일 레이어 추가 (배경 지도)
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -27,6 +32,7 @@ campgrounds.forEach(camp => {
     bounds.push([lat, lng]);
   }
 });
+
 
 map.addLayer(markerCluster);
 
