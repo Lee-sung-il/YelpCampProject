@@ -159,3 +159,5 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Serving on port ${port}`);
 });
+
+console.log('NODE_ENV:', process.env.NODE_ENV);

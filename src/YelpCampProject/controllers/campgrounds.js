@@ -1,4 +1,5 @@
 const Campground = require('../models/campground');
+const moment = require('moment');
 const {cloudinary} = require('../cloudinary');
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
 const MapToken = process.env.OPENCAGE_KEY;
@@ -53,7 +54,7 @@ module.exports.showCampground = async (req, res) => {
     req.flash('error', 'Cannot find that campground!');
     return res.redirect(`/campgrounds`);
   }
-  res.render('campgrounds/show', { campground });
+  res.render('campgrounds/show', { campground,  moment });
 };
 
 module.exports.renderEditForm = async (req, res) => {

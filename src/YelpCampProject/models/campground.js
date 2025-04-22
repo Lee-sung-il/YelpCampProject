@@ -54,7 +54,7 @@ const CampgroundSchema = new Schema({
       ref: 'Review',
     },
   ],
-}, { toJSON: { virtuals: true }});
+}, { toJSON: { virtuals: true}},{ timestamps: true});
 
 CampgroundSchema.virtual('properties.popUpMarkup').get(function () {
   return `
