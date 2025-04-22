@@ -37,6 +37,7 @@ db.once('open', function () {
 app.engine('ejs', ejsMate);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+app.set('trust proxy', 1); // 첫 번째 프록시를 신뢰하도록 설정
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
