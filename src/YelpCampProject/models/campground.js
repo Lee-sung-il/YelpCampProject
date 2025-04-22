@@ -24,46 +24,51 @@ ImageSchema.virtual('thumbnail').get(function () {
     // 기타 이미지일 경우 원본 유지
     return this.url;
   }
-})
+});
 
-
-const CampgroundSchema = new Schema({
-  title: String,
-  images: [ImageSchema],
-  price: Number,
-  description: String,
-  location: String,
-  geometry: {
-    type: {
-      type: String,
-      enum: ['Point'],
-      required: true
+const CampgroundSchema = new Schema(
+  {
+    title: String,
+    images: [ImageSchema],
+    price: Number,
+    description: String,
+    location: String,
+    geometry: {
+      type: {
+        type: String,
+        enum: ['Point'],
+        required: true,
+      },
+      coordinates: {
+        type: [Number],
+        required: true,
+      },
     },
-    coordinates: {
-      type: [Number],
-      required: true
-    }
-  },
-  author: {
-    type: Schema.Types.ObjectId,
-    ref: 'User',
-  },
-  reviews: [
-    {
+    author: {
       type: Schema.Types.ObjectId,
-      ref: 'Review',
+      ref: 'User',
     },
-  ],
-}, { toJSON: { virtuals: true}},{ timestamps: true});
+    reviews: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Review',
+      },
+    ],
+  },
+  {
+    toJSON: {
+      virtuals: true,
+      timestamps: true,
+    },
+  },
+);
 
 CampgroundSchema.virtual('properties.popUpMarkup').get(function () {
   return `
 <strong><a href="/campgrounds/${this._id}">${this.title}</a></strong>
-<p>${this.description.substring(0,20)}...</p>
-`
-})
-
-
+<p>${this.description.substring(0, 20)}...</p>
+`;
+});
 
 CampgroundSchema.post('findOneAndDelete', async (doc) => {
   if (doc) {
