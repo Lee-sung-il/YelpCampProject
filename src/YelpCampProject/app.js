@@ -81,24 +81,15 @@ const scriptSrcUrls = [
   "https://cdn.jsdelivr.net",             // Bootstrap JS
   "https://unpkg.com/",                   // Leaflet & MarkerCluster
   "https://cdnjs.cloudflare.com/",       // Fallback libs
-  "https://api.tiles.mapbox.com/",       // Mapbox tiles
-  "https://api.mapbox.com/",             // Mapbox services
   "https://kit.fontawesome.com/",        // FontAwesome
 ];
 const styleSrcUrls = [
   "https://cdn.jsdelivr.net",             // Bootstrap CSS
   "https://unpkg.com/",                   // Leaflet CSS
   "https://fonts.googleapis.com/",        // Google Fonts
-  "https://api.mapbox.com/",              // Mapbox
-  "https://api.tiles.mapbox.com/",        // Mapbox tiles
   "https://use.fontawesome.com/",         // FontAwesome
 ];
-const connectSrcUrls = [
-  "https://api.mapbox.com/",
-  "https://a.tiles.mapbox.com/",
-  "https://b.tiles.mapbox.com/",
-  "https://events.mapbox.com/",
-];
+const connectSrcUrls = []; // Leaflet은 connect 요청 거의 없음
 const fontSrcUrls = [
   "https://fonts.gstatic.com/",           // Google Fonts
 ];
