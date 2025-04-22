@@ -69,7 +69,7 @@ const sessionConfig = {
   cookie: {
     httpOnly: true,
     // secure: true,
-    secure: process.env.NODE_ENV === 'production', // 🔥 환경에 따라 자동 적용
+    // secure: process.env.NODE_ENV === 'production', // 🔥 환경에 따라 자동 적용
     expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
     maxAge: 1000 * 60 * 60 * 24 * 7,
   },
