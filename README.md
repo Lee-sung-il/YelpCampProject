@@ -25,7 +25,7 @@ Colt Steele의 Web Developer Bootcamp 강의를 바탕으로 개발했습니다.
 | EJS        | Node.js   | MongoDB      | Express.js     |
 | Bootstrap  | Mongoose  |              | Passport.js    |
 |            |           |              | Cloudinary API |
-|            |           |              | Mapbox API     |
+|            |           |              | leaflet API     |
 |            |           |              | Multer         |
 
 ## 📁 프로젝트 구조
