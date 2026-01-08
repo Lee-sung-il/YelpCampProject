@@ -7,7 +7,7 @@ Colt Steele의 Web Developer Bootcamp 강의를 바탕으로 개발했습니다.
 ![YelpCamp 데모 이미지](https://user-images.githubusercontent.com/yourusername/screenshots/yelpcamp-demo.png)
 
 ##배포 주소
-<a herf="https://yelpcampproject-8xq5.onrender.com/"/>
+<a herf="https://yelpcampproject-8xq5.onrender.com/">YelpCamp<a/>
 ## 🚀 주요 기능
 
 - 사용자 회원가입 / 로그인 / 로그아웃 기능
