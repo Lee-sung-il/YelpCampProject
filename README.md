@@ -8,7 +8,7 @@ Colt Steele의 Web Developer Bootcamp 강의를 바탕으로 개발했습니다.
 
 ##배포 주소
 </br>
-<a herf="https://yelpcampproject-8xq5.onrender.com">YelpCamp<a/>
+<a href="https://yelpcampproject-8xq5.onrender.com">YelpCamp<a/>
 </br>
 ## 🚀 주요 기능
 
